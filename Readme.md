@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Павел Матвеев](https://up.htmlacademy.ru/htmlcss/28/user/1452051).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Иовлев](https://htmlacademy.ru/profile/skywalker).
 
 ---
 
