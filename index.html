@@ -7,15 +7,15 @@
   <body>
     <header>
       <nav>
-      <a>
-        <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип Седона">
-      </a>
-      <ul>
-        <li><a href="#">Информация</a></li>
-        <li><a href="#">Фото и видео</a></li>
-        <li><a href="#">Карта штата</a></li>
-        <li><a href="hotels.html">Гостиницы</a></li>
-      </ul>
+        <a>
+          <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип Седона">
+        </a>
+        <ul>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#">Карта штата</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -25,8 +25,8 @@
         <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
         <ol>
           <li>
-          <h3>Настоящий городок</h3>
-          <p>Седона не атракцион для туристов, там течет своя жизнь</p>
+            <h3>Настоящий городок</h3>
+            <p>Седона не атракцион для туристов, там течет своя жизнь</p>
             <ul>
               <li>
                 <h3>Жилье</h3>
@@ -66,7 +66,25 @@
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button type="button">Поиск гостиницы в Седоне</button>
-        <!--Здесь будет форма для регистрации в гостинице-->
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="checkin-date">Дата заезда</label>
+            <input type="date" name="checkin-date" id="checkin-date" required>
+          </p>
+          <p>
+            <label for="checkout-date">Дата выезда</label>
+            <input type="date" name="checkout-date" id="checkout-date" required>
+          </p>
+          <p>
+            <label for="adult">Взрослые</label>
+            <input type="number" name="adult-number" id="adult" min="1" step="1" value="2">
+          </p>
+          <p>
+            <label for="children">Дети</label>
+            <input type="number" name="children-number" id="children" min="0" step="1" value="0">
+          </p>
+          <button type="submit">Найти</button>
+        </form>
       </section>
     </main>
     <footer>
