@@ -66,22 +66,28 @@
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button type="button">Поиск гостиницы в Седоне</button>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form action="https://echo.htmlacademy.ru" method="post" name="checkin-information">
           <p>
             <label for="checkin-date">Дата заезда</label>
-            <input type="date" name="checkin-date" id="checkin-date" required>
+            <input type="text" name="checkin-date" id="checkin-date" placeholder="25 мая 2020" required>
+            <button type="button">ярлык календаря</button>
           </p>
           <p>
             <label for="checkout-date">Дата выезда</label>
-            <input type="date" name="checkout-date" id="checkout-date" required>
+            <input type="text" name="checkout-date" id="checkout-date" placeholder="15 июня 2020" required>
+            <button type="button">ярлык календаря</button>
           </p>
           <p>
             <label for="adult">Взрослые</label>
+            <button type="button">+</button>
             <input type="number" name="adult-number" id="adult" min="1" step="1" value="2">
+            <button type="button">-</button>
           </p>
           <p>
             <label for="children">Дети</label>
+            <button type="button">+</button>
             <input type="number" name="children-number" id="children" min="0" step="1" value="0">
+            <button type="button">-</button>
           </p>
           <button type="submit">Найти</button>
         </form>
