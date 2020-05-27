@@ -1,0 +1,269 @@
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-brown: #766357;
+  --basic-extra-brown: #604E43;
+  --basic-dark-brown: #503E33;
+  --basic-blue: #81B3D2;
+  --basic-extra-blue: #669EC0;
+  --basic-dark-blue: #5496BD;
+  --basic-grey: #5496BD;
+  --basic-extra-white: #F2F2F2;
+  --basic-white: #FFFFFF;
+}
+ /* Global */
+
+ body{
+  min-width: 1280px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+  background-image: url("../img/bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* main-navigation */
+
+ .main-navigation{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: transparent;
+ }
+
+ .main-navigation-wrapper {
+  background-color: var(--basic-white);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: var(--basic-black);
+  background-color: var(--basic-extra-white);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+    color: var(--basic-blue);
+}
+
+.site-navigation a:active {
+  color: var(--basic-grey)
+}
+
+/*features*/
+
+.features-list,
+.features-comments {
+  list-style: none;
+}
+
+.main-features,
+.features {
+  text-align: center;
+}
+
+.main-fetures h1{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.features h2{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.features-item h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.features-item p {
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 21px;
+}
+
+.feature-item-blue {
+ background-color: var(--basic-blue);
+ color: var(--basic-white);
+}
+
+/* chekin-form */
+
+.checkin-form h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.checkin-form {
+  text-align: center;
+}
+
+.checkin-form-text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+/* bottons */
+
+.button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  }
+
+.small-button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button-brown {
+  background-color: var(--basic-brown);
+  border: inherit;
+}
+
+.button-brown:hover,
+.button-brown:focus {
+  background-color: var(--basic-extra-brown);
+  border: inherit;
+}
+
+.button-brown:active {
+  background-color: var(--basic-dark-brown);
+  border: inherit;
+}
+
+.button-blue {
+  background-color: var(--basic-blue);
+  border: inherit;
+}
+
+.button-blue:hover,
+.button-blue:focus {
+  background-color: var(--basic-extra-blue);
+  border: inherit;
+}
+
+.button-blue:active {
+  background-color: var(--basic-dark-blue);
+  border: inherit;
+}
+
+/* HOTELS.HTML */
+
+.hotel-name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black)
+}
+
+.hotels p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.hotel-name a {
+  color: var(--basic-black);
+}
+
+.hotel-name a:hover,
+.hotel-name a:focus {
+  color: var(--basic-blue);
+}
+
+.hotel-name a:active {
+  color: var(--basic-grey);
+}
+
+
+/* main-footer*/
+
+.footer-contacts {
+  color: var(--basic-black);
+}
+
+.social {
+  list-style: none;
+}
+
+.social-button {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--basic-extra-blue);
+}
+
+.social-button:active {
+  background-color: var(--basic-dark-blue);
+ }
+
+.footer-copyright a {
+  color: var(--basic-black);
+}
+
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+  color: var(--basic-blue);
+}
+
+.footer-copyright a:active {
+  color: var(--basic-grey);
+}
