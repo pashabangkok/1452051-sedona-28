@@ -1,6 +1,9 @@
 /* Variables */
 
 :root {
+  --basic-text: #333333;
+  --basic-active-text: rgba(255, 255, 255, 0.3);
+  --basic-activ-hotel: rgba(0, 0, 0, 0.3);
   --basic-black: #000000;
   --basic-brown: #766357;
   --basic-extra-brown: #604E43;
@@ -18,10 +21,12 @@
   min-width: 1280px;
   margin: 0;
   padding: 0;
+  font-size: 14px;
+  line-height: 21px;
   font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
+  color: var(--basic-text);
   background-color: var(--basic-white);
-  background-image: url("../img/bg.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -48,7 +53,7 @@ img {
  .main-navigation{
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
+  font-size: inherit;
   line-height: 26px;
   color: var(--basic-black);
   background-color: transparent;
@@ -64,7 +69,6 @@ img {
 
 .site-navigation a {
   color: var(--basic-black);
-  background-color: var(--basic-extra-white);
 }
 
 .site-navigation a:hover,
@@ -76,6 +80,9 @@ img {
   color: var(--basic-grey)
 }
 
+.site-navigation-current a {
+  color: var(--basic-brown);
+}
 /*features*/
 
 .features-list,
@@ -88,17 +95,18 @@ img {
   text-align: center;
 }
 
-.main-fetures h1{
+.main-features h1{
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  color: var(--basic-black);
 }
 
 .features h2{
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: inherit;
   line-height: 26px;
 }
 
@@ -110,15 +118,13 @@ img {
 }
 
 .features-item p {
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 21px;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .feature-item-blue {
- background-color: var(--basic-blue);
- color: var(--basic-white);
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
 }
 
 /* chekin-form */
@@ -127,8 +133,9 @@ line-height: 21px;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
-  line-height: 24px;
+  line-height: 30px;
   text-align: center;
+  color: var(--basic-black);
 }
 
 .checkin-form {
@@ -138,11 +145,24 @@ line-height: 21px;
 .checkin-form-text {
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
+  font-size: inherit;
   line-height: 26px;
 }
 
-/* bottons */
+.checkin-form-text input:hover {
+  border-color: var(--basic-white)
+}
+
+.checkin-form-text input:focus {
+  border-color: var(--basic-extra-white)
+}
+
+.checkin-form-text input:active {
+  border-color: var(--basic-white);
+  border: 2px solid #E5E5E5;
+  box-sizing: border-box;
+}
+/* buttons */
 
 .button {
   font-style: normal;
@@ -159,8 +179,6 @@ line-height: 21px;
 .small-button {
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
-  line-height: 21px;
   text-align: center;
   color: var(--basic-white);
   vertical-align: middle;
@@ -181,6 +199,7 @@ line-height: 21px;
 
 .button-brown:active {
   background-color: var(--basic-dark-brown);
+  color: var(--basic-active-text);
   border: inherit;
 }
 
@@ -197,6 +216,7 @@ line-height: 21px;
 
 .button-blue:active {
   background-color: var(--basic-dark-blue);
+  color: var(--basic-active-text);
   border: inherit;
 }
 
@@ -213,8 +233,6 @@ line-height: 21px;
 .hotels p {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
 }
 
 .hotel-name a {
@@ -227,13 +245,21 @@ line-height: 21px;
 }
 
 .hotel-name a:active {
-  color: var(--basic-grey);
+  color: var(--basic-activ-hotel);
 }
 
 
 /* main-footer*/
 
 .footer-contacts {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.footer-contacts a {
   color: var(--basic-black);
 }
 
@@ -254,6 +280,14 @@ line-height: 21px;
 .social-button:active {
   background-color: var(--basic-dark-blue);
  }
+
+.footer-copyright{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
 
 .footer-copyright a {
   color: var(--basic-black);
