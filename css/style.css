@@ -265,16 +265,16 @@ img {
 
 /* hotels-filter*/
 
-.filter {
+.hotel-filter {
   background-color: var(--basic-blue);
   color: var(--basic-white);
 }
 
-.filter ul {
+.hotel-filter ul {
   list-style: none;
 }
 
-.filter fieldset{
+.hotel-filter fieldset{
   border: none;
 }
 
@@ -282,15 +282,58 @@ fieldset legend {
   font-size: 16px;
 }
 
-.filter input {
+.hotel-filter input,
+.filter-results input{
   background-color: transparent;
   border: none;
 }
 
-.filter .filter-button {
+.hotel-filter .filter-button {
   background-color: transparent;
   text-transform: uppercase;
 }
+
+.filter-results {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+.filter-results input {
+  font-weight: bold;
+}
+
+.hotels-sort {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-black);
+  list-style: none;
+}
+
+
+.hotels-sort a:hover,
+.hotels-sort a:focus {
+  color: var(--basic-blue);
+  border-bottom: 1px dashed var(--basic-blue);
+}
+
+.hotels-sort a:active {
+  color: var(--basic-black);
+  border-bottom: none;
+}
+
+.hotels-sort a {
+  color: var(--basic-activ-text);
+  border-bottom: 1px dashed var(--basic-blue);
+}
+
+.hotels-sort-current a {
+  color: var(--basic-blue);
+  border-bottom: none;
+ }
 
 /* main-footer*/
 
