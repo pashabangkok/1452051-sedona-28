@@ -159,21 +159,19 @@ img {
   padding-bottom: 6px;
   border: none;
   text-transform: uppercase;
-}
-
-.checkin-form-text input:hover {
+  color: var(--basic-black);
   background-color: var(--basic-extra-white);
 }
 
-.checkin-form-text input:focus {
+.checkin-form-text input:hover {
   background-color: var(--basic-grey);
 }
 
-.checkin-form-text input:active {
+.checkin-form-text input:focus {
   background-color: var(--basic-white);
   border: 2px solid #E5E5E5;
-  box-sizing: border-box;
 }
+
 /* buttons */
 
 .button {
