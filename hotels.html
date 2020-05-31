@@ -24,9 +24,57 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section class="filter">
         <h1 class="visually-hidden">Гостиницы</h1>
-        <!--Здесь будет фильтр для гостиниц-->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="swimingpool" id="swimingpool-filter" checked>
+                <label for="swimingpool-filter">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="parking-filter">
+                <label for="parking-filter">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wifi" id="wifi-filter">
+                <label for="wifi-filter">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="hotel-filter" checked>
+                <label for="hotel-filter">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" name="motel-filter" checked>
+                <label for="motel-filter">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="apartment" id="apartment-filter" checked>
+                <label for="apartment-filter">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            <label for="mincost">От</label>
+            <input type="text" name="mincost" id="mincost" value="0">
+            <label for="maxcost">До</label>
+            <input type="text" name="maxcost" id="maxcost" value="3000">
+            <div>
+              <button type="button">точка1*</button>
+              <div>--шкала--</div>
+              <button type="button">*точка2</button>
+            </div>
+          </fieldset>
+          <button class="filter-button" type="submit">Показать</button>
+        </form>
       </section>
       <section class="hotels">
         <h2 class="visually-hidden">Название гостиниц</h2>
