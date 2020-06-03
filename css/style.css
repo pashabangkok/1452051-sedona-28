@@ -66,9 +66,7 @@ img {
 /* main-navigation */
 
  .main-navigation{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
   width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
@@ -81,8 +79,6 @@ img {
  }
 
  .main-navigation-wrapper {
-  display: flex;
-  justify-content: space-between;
   background-color: var(--basic-white);
 }
 
@@ -178,9 +174,10 @@ img {
 .checkin-form-text input{
   font-weight: bold;
   line-height: 26px;
+  padding: 0 10px;
   padding-top: 4px;
   padding-bottom: 4px;
-  border: none;
+  border: 2px solid var(--basic-extra-white);
   text-transform: uppercase;
   color: var(--basic-black);
   background-color: var(--basic-extra-white);
@@ -189,10 +186,12 @@ img {
 
 .checkin-form-text input:hover {
   background-color: var(--basic-grey);
+  border-color: var(--basic-grey);
 }
 
 .checkin-form-text input:focus {
   background-color: var(--basic-white);
+  border-color: #E5E5E5;
 }
 
 /* buttons */
@@ -210,7 +209,6 @@ img {
   }
 
 .small-button {
-  font-style: normal;
   font-weight: bold;
   text-align: center;
   color: var(--basic-white);
@@ -358,18 +356,13 @@ fieldset legend {
 
 /* main-footer*/
 
-.footer-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: var(--basic-footer);
-  align-items: center;
+.footer-container {
+ background-color: var(--basic-footer);
 }
 
 .footer-contacts {
   width: 327px;
   height: 120px;
-  text-align: center;
-  align-items: center;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -387,17 +380,13 @@ fieldset legend {
 }
 
 .social {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  width: 400px;
-  height: 120px;
-  align-items: center;
   list-style: none;
 }
 
 .social-button {
+  display: block;
+  width: 46px;
+  height: 48px;
   background-color: var(--basic-blue);
   color: var(--basic-white);
 }
@@ -411,9 +400,7 @@ fieldset legend {
   background-color: var(--basic-dark-blue);
  }
 
-.footer-copyright{
-  width: 327px;
-  height: 120px;
+.footer-copyright {
   font-style: normal;
   font-weight: normal;
   line-height: 26px;
