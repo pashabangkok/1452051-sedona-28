@@ -14,6 +14,7 @@
   --basic-grey: #EBEBEB;
   --basic-extra-white: #F2F2F2;
   --basic-white: #FFFFFF;
+  --basic-footer: background: rgba(255, 255, 255, 0.9);
 }
  /* Global */
 
@@ -48,9 +49,29 @@ img {
   margin: -1px;
 }
 
+/* grid */
+
+.page{
+  height: 100%;
+}
+
+.page-body{
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+
 /* main-navigation */
 
  .main-navigation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
   font-style: normal;
   font-weight: bold;
   font-size: inherit;
@@ -60,6 +81,8 @@ img {
  }
 
  .main-navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--basic-white);
 }
 
@@ -155,12 +178,13 @@ img {
 .checkin-form-text input{
   font-weight: bold;
   line-height: 26px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   border: none;
   text-transform: uppercase;
   color: var(--basic-black);
   background-color: var(--basic-extra-white);
+  outline: none;
 }
 
 .checkin-form-text input:hover {
@@ -169,7 +193,6 @@ img {
 
 .checkin-form-text input:focus {
   background-color: var(--basic-white);
-  border: 2px solid #E5E5E5;
 }
 
 /* buttons */
@@ -335,12 +358,28 @@ fieldset legend {
 
 /* main-footer*/
 
+.footer-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--basic-footer);
+  align-items: center;
+}
+
 .footer-contacts {
+  width: 327px;
+  height: 120px;
+  text-align: center;
+  align-items: center;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
+  }
+
+.footer-contacts p{
+  margin-top: 23px;
+  margin-bottom: 9px;
 }
 
 .footer-contacts a {
@@ -348,6 +387,13 @@ fieldset legend {
 }
 
 .social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 400px;
+  height: 120px;
+  align-items: center;
   list-style: none;
 }
 
@@ -366,6 +412,8 @@ fieldset legend {
  }
 
 .footer-copyright{
+  width: 327px;
+  height: 120px;
   font-style: normal;
   font-weight: normal;
   line-height: 26px;
