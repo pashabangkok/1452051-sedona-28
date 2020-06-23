@@ -15,7 +15,7 @@
   --basic-grey: #EBEBEB;
   --basic-extra-white: #F2F2F2;
   --basic-white: #FFFFFF;
-  --basic-footer: background: rgba(255, 255, 255, 0.9);
+  --basic-footer: rgba(255, 255, 255, 0.9);
 }
  /* Global */
 
@@ -352,6 +352,7 @@ img {
 .checkin-form {
   text-align: center;
   position: relative;
+  z-index: 4;
 }
 
 .checkin-form-info {
@@ -410,6 +411,7 @@ img {
   top: 6px;
   right: 9px;
   cursor: pointer;
+  outline: none;
 }
 
 .date-field-calendar:hover,
@@ -432,7 +434,7 @@ img {
 }
 
 .number {
-  max-width: 114px;
+  max-width: 36px;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -449,62 +451,56 @@ input[type='number'] {
 }
 
 .number-field {
-  max-width: 114px;
-  max-height: 38px;
   display: flex;
   position: relative;
   margin-bottom: 54px;
  }
 
+.button-qty-plus::after,
+.button-qty-minus::after {
+  content: "";
+  width: 12px;
+  height: 3px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+  background-color: #A9A9A9;
+  position: absolute;
+}
+
+.button-qty-plus::before {
+  content: "";
+  width: 3px;
+  height: 12px;
+  top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+  background-color: #A9A9A9;
+  position: absolute;
+}
+
 .button-qty {
   display: block;
   width: 39px;
-  height: 38px;
+  padding: 0 19px;
+  box-sizing: border-box;
   border: 0;
   cursor: pointer;
+  position: relative;
+  outline: none;
 }
 
-.button-qty-minus,
-.button-qty-plus {
-  content: "";
-  width: 12px;
-  height: 3px;
-  background-color: #A9A9A9;
-  position: absolute;
-  top: 19px;
-}
-
-.button-qty-minus {
-  left: 13px;
-}
-
-.button-qty-plus {
-  right: 13px;
- }
-
-.button-qty-plus::after {
-  content: "";
-  width: 12px;
-  height: 3px;
-  background-color: #A9A9A9;
-  position: absolute;
-  transform: rotate(90deg);
-  top: 0px;
-  right: 0px;
-}
-
-.button-qty:hover,
 .button-qty:hover::after,
-.button-qty:focus,
-.button-qty:focus::after {
+.button-qty:hover::before,
+.button-qty:focus::after,
+.button-qty:focus::before {
   background-color: var(--basic-black);
 }
 
-.button-qty:active,
-.button-qty:active::after {
+.button-qty:active::after,
+.button-qty:active::before {
  background-color: var(--basic-blue);
 }
-
 
 .checkin-form-text input {
   font-weight: bold;
@@ -603,16 +599,33 @@ input[type='number'] {
 
 /* MAP */
 
+.map iframe {
+  border: none;
+}
+
 .map {
   min-height: 594px;
   background-color: var(--basic-grey);
-  background-image: url("../img/map.png");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  position: relative;
+}
+
+.map p {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .map iframe {
   border: none;
+  position: relative;
+  z-index: 2;
+}
+
+.map img {
+  width: 1200px;
+  height: 594px;
 }
 
 /* HOTELS.HTML */
@@ -715,7 +728,7 @@ input[type='number'] {
 }
 
 .filter-checkbox + label::before,
-.filter-checkbox:checked + label::after {
+.filter-checkbox:checked + label::before {
   content: "";
   position: absolute;
   left: -40px;
@@ -730,7 +743,7 @@ input[type='number'] {
   background-image: url("../img/checkbox-off.svg");
 }
 
-.filter-checkbox:checked + label::after {
+.filter-checkbox:checked + label::before {
   background-image: url("../img/checkbox-on.svg");
 }
 
@@ -738,10 +751,9 @@ input[type='number'] {
   background-image: url("../img/checkbox-off-disabled.svg");
 }
 
-.filter-checkbox:checked:disabled + label::after {
+.filter-checkbox:checked:disabled + label::before {
   background-image: url("../img/checkbox-on-disabled.svg");
 }
-
 
 .price-fieldset {
   align-self: flex-start;
@@ -806,8 +818,9 @@ input[type='number'] {
 
 .price-toggle {
   position: absolute;
-  top: -9px;
-  left: -2px;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
   width: 20px;
   height: 22px;
   background-image: url("../img/filter-button.svg");
@@ -1037,8 +1050,13 @@ input[type='number'] {
 .footer-container {
   padding: 0 6%;
   display: flex;
+  position: relative;
   justify-content: space-between;
   background-color: var(--basic-footer);
+}
+.footer-index {
+  margin-top: -120px;
+  z-index: 3;
 }
 
 .footer-contacts {
@@ -1051,7 +1069,7 @@ input[type='number'] {
 }
 
 .col-1-3 {
-  width: 33.3%;
+  width: 33.3334%;
   text-align: center;
   margin: 0;
   padding: 0;
