@@ -124,22 +124,24 @@ img {
   padding-left: 141px;
 }
 
-.site-navigation a {
+.site-list {
   color: var(--basic-black);
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus {
+.site-list[href]:hover,
+.site-list[href]:focus {
     color: var(--basic-blue);
 }
 
-.site-navigation a:active {
+.site-list[href]:active {
   color: var(--basic-activ-text);
 }
 
-.site-navigation-current a {
+.site-list:not([href]) {
   color: var(--basic-brown);
+  cursor: default;
 }
+
 /*features*/
 
 .main-features-logo {
@@ -750,6 +752,10 @@ input[type='number'] {
   cursor: pointer;
 }
 
+.filter-checkbox:focus + label::before {
+   outline: 1px solid var(--basic-blue);
+}
+
 .filter-checkbox:not(:checked) + label::before {
   background-image: url("../img/checkbox-off.svg");
 }
@@ -797,10 +803,6 @@ input[type='number'] {
   left: 50%;
 }
 
-.price-field {
-  padding-bottom: 5px;
-}
-
 .price-input {
   font: inherit;
   color: var(--basic-white);
@@ -839,10 +841,12 @@ input[type='number'] {
   cursor: pointer;
 }
 
-.price-toggle:hover, .price-toggle:focus {
+.price-toggle:hover,
+.price-toggle:focus {
   width: 23px;
   height: 24px;
   background-size: 23px 24px;
+  outline: none;
 }
 
 .price-toggle-max {
@@ -869,7 +873,7 @@ input[type='number'] {
 }
 
 .filter-button:active {
-  color: var(--light-asphalt);
+  color: var(--basic-black);
   background-color: var(--basic-white);
 }
 
@@ -924,36 +928,41 @@ input[type='number'] {
   border-bottom: 1px dashed var(--basic-blue);
 }
 
-.hotels-sort-item:hover,
-.hotels-sort-item:focus {
+.hotels-sort-item[href]:hover,
+.hotels-sort-item[href]:focus {
   color: var(--basic-blue);
   border-bottom: 1px dashed var(--basic-blue);
 }
 
-.hotels-sort-item:active {
+.hotels-sort-item[href]:active {
   color: var(--basic-black);
   border: none;
 }
 
-.hotels-sort-current {
+.hotels-sort-item:not([href]) {
   color: var(--basic-blue);
+  cursor: default;
   border: none;
 }
 
-.direction-button svg {
-  fill: var(--basic-row);
+.direction-button {
+  outline: none;
 }
 
-.button-current svg {
+.direction-button:not([href]) svg {
   fill: var(--basic-blue);
 }
 
-.direction-button:hover svg,
-.direction-button:focus svg {
+.direction-button[href] svg {
+  fill: var(--basic-row);
+}
+
+.direction-button[href]:hover svg,
+.direction-button[href]:focus svg {
   fill: var(--basic-black);
 }
 
-.direction-button:active svg {
+.direction-button[href]:active svg {
   fill: var(--basic-blue);
 }
 
@@ -1097,6 +1106,15 @@ input[type='number'] {
 
 .footer-contacts a {
   color: var(--basic-black);
+}
+
+.tel-number:hover,
+.tel-number:focus {
+  color: var(--basic-blue);
+}
+
+.tel-number:active {
+  color: var(--basic-activ-text);
 }
 
 .social {
