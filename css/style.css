@@ -178,6 +178,10 @@ img {
 .features-item {
   width: 400px;
   min-height: 256px;
+  padding: 0 68px;
+  padding-top: 47px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .feature-item-big {
@@ -188,6 +192,12 @@ img {
 
 .feature-item-blue {
   width: 400px;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  box-sizing: border-box;
+  padding: 0 48px;
+  padding-top: 47px;
+  padding-bottom: 20px;
 }
 
 .features-item h3 {
@@ -197,22 +207,18 @@ img {
   line-height: 21px;
   text-align: center;
   margin: 0;
-  padding: 0 120px;
-  padding-top: 47px;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .feature-item-blue h3 {
   margin: 0;
-  padding: 0 50px;
-  padding-top: 47px;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
   text-align: center;
 }
 
 .features-item p {
   margin: 0;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
   font-style: normal;
   font-weight: normal;
   text-align: center;
@@ -252,13 +258,6 @@ img {
   margin-bottom: 54px;
 }
 
-.feature-item-blue {
-  background-color: var(--basic-blue);
-  color: var(--basic-white);
-  box-sizing: border-box;
-  padding: 0 48px;
-}
-
 .feature-img img {
   display: block;
 }
@@ -276,26 +275,24 @@ img {
 
 .features-comments li {
   width: 400px;
+
+  position: relative;
 }
 
-.features-comments h3 {
+.item-comment h3 {
  margin: 0;
  padding-top: 160px;
  padding-bottom: 25px;
 }
 
-.features-comments p {
+.item-commet p {
   margin: 0;
-  padding: 0 50px;
-  padding-bottom: 82px;
-}
-
-.features-item-text {
-  padding: 0 68px;
 }
 
 .item-commet {
-  position: relative;
+  padding: 0 50px;
+  padding-top: 160px;
+  padding-bottom: 82px;
 }
 
 .item-commet h3::before {
