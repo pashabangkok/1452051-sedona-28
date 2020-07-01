@@ -355,7 +355,6 @@ img {
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
-
 }
 
 .checkin-form-text {
@@ -370,8 +369,13 @@ img {
   animation: appearance 0.8s;
 }
 
-.ckeckin-form-closed {
-  display: none;
+.checkin-form-open {
+  animation: disappearance 0.8s;
+  display: block;
+}
+
+.checkin-form-closed {
+
 }
 
 .checkin-form-text p {
@@ -1182,4 +1186,12 @@ input[type='number'] {
   }
 }
 
+@keyframes disappearance {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 
