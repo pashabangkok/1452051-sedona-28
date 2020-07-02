@@ -383,7 +383,24 @@ img {
 .checkin-form-close {
   animation: disappearance 0.8s;
   transform: translateY(-100%) translateX(-50%);
+}
 
+@keyframes appearance {
+  0% {
+    transform: translateY(-100%) translateX(-50%);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@keyframes disappearance {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  100% {
+    transform: translateY(-100%) translateX(-50%);
+  }
 }
 
 .checkin-form-text p {
@@ -1186,24 +1203,3 @@ input[type='number'] {
 .footer-copyright-logo:active .html-logo {
   fill: var(--basic-activ-text);
 }
-
-
-
-@keyframes appearance {
-  0% {
-    transform: translateY(-100%) translateX(-50%);
-  }
-  100% {
-    transform: translateY(0) translateX(-50%);
-  }
-}
-
-@keyframes disappearance {
-  0% {
-    transform: translateY(0) translateX(-50%);
-  }
-  100% {
-    transform: translateY(-100%) translateX(-50%);
-  }
-}
-
