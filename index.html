@@ -5,23 +5,36 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap;subset=latin,cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
+<!--
+<style>
+  html {
+    background-image: url("index.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+body {
+  opacity: 0.5;
+}
+
+</style>
+-->
+
     <div class="container">
       <header class="main-header">
         <nav class="main-navigation">
           <a class="main-header-logo">
             <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип Седона">
           </a>
-          <div class="main-navigation-wrapper">
-            <ul class="site-navigation">
-              <li><a class="site-list" href="#">Информация</a></li>
-              <li><a class="site-list" href="#">Фото и видео</a></li>
-              <li><a class="site-list" href="#">Карта штата</a></li>
-              <li><a class="site-list" href="hotels.html">Гостиницы</a></li>
-            </ul>
-          </div>
+          <ul class="site-navigation main-navigation-wrapper">
+            <li class="site-list"><a href="#">Информация</a></li>
+            <li class="site-list"><a href="#">Фото и видео</a></li>
+            <li class="site-list"><a href="#">Карта штата</a></li>
+            <li class="site-list"><a href="hotels.html">Гостиницы</a></li>
+          </ul>
         </nav>
       </header>
       <main>
@@ -30,9 +43,9 @@
            <img src="img/intro-welcome.svg" width="456" height="350" alt="Добро пожаловать в Седону">
           </div>
           <h1>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </div>
         <section class="features">
-          <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
           <ul class="features-list">
             <li class="features-item feature-item-big">
               <div class="feature-item-blue">
@@ -43,23 +56,17 @@
               <div class="feature-img">
                 <img src="img/image1.jpg" width="800" height="256" alt="фото города Седона">
               </div>
-              <ul class="features-comments">
-                <li>
-                  <div class="item-commet item-commet-house">
-                    <h3>Жильё</h3>
-                    <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-                  </div>
+              <ul class="features-comments item-commet">
+                <li class="item-commet-house">
+                  <h3>Жильё</h3>
+                  <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
-                <li>
-                  <div class="item-commet item-commet-food">
-                    <h3>Еда</h3>
-                    <p>Всегда заказывайте фирменный бургер вы не разочаруетесь!</p>
-                  </div>
-                <li>
-                  <div class="item-commet item-commet-gift">
-                    <h3>Сувениры</h3>
-                    <p>Не только китайского, но и местного производства!</p>
-                  </div>
+                <li class="item-commet item-commet-food">
+                  <h3>Еда</h3>
+                  <p>Всегда заказывайте фирменный бургер вы не разочаруетесь!</p>
+                <li class="item-commet item-commet-gift">
+                  <h3>Сувениры</h3>
+                  <p>Не только китайского, но и местного производства!</p>
                 </li>
               </ul>
             </li>
@@ -119,7 +126,7 @@
                   <label class="label-field" for="adult">Взрослые:</label>
                   <div class="number-field number-field-adult">
                     <button class="button-qty button-qty-minus" type="button"><span class="visually-hidden">убавить</span></button>
-                    <input class="number" type="number" name="adult-number" id="adult" min="1" step="1" value="2">
+                    <input class="number adult-number-input" type="number" name="adult-number" id="adult" min="1" step="1" value="2">
                     <button class="button-qty button-qty-plus" type="button"><span class="visually-hidden">добавить</span></button>
                   </div>
                 </div>
@@ -127,7 +134,7 @@
                   <label class="label-field" for="children">Дети:</label>
                   <div class="number-field">
                     <button class="button-qty button-qty-minus" type="button"><span class="visually-hidden">убавить</span></button>
-                    <input class="number" type="number" name="children-number" id="children" min="0" step="1" value="0">
+                    <input class="number children-number-input" type="number" name="children-number" id="children" min="0" step="1" value="0">
                     <button class="button-qty button-qty-plus" type="button"><span class="visually-hidden">добавить</span></button>
                   </div>
                 </div>
