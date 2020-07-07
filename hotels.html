@@ -15,11 +15,11 @@
             <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип Седона">
           </a>
           <div class="main-navigation-wrapper">
-            <ul class="site-navigation">
-              <li><a class="site-list" href="#">Информация</a></li>
-              <li><a class="site-list" href="#">Фото и видео</a></li>
-              <li><a class="site-list" href="#">Карта штата</a></li>
-              <li><a class="site-list">Гостиницы</a></li>
+            <ul class="site-navigation main-navigation-wrapper">
+              <li class="site-list"><a href="#">Информация</a></li>
+              <li class="site-list"><a href="#">Фото и видео</a></li>
+              <li class="site-list"><a href="#">Карта штата</a></li>
+              <li class="site-list"><a>Гостиницы</a></li>
             </ul>
           </div>
         </nav>
@@ -31,6 +31,18 @@
             <fieldset class="filter">
               <legend>Инфраструктура:</legend>
               <ul class="check-section">
+                <li>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="swimingpool" id="swimingpool-filter" checked>
+                  <label for="swimingpool-filter">Бассейн</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="parking" id="parking-filter">
+                  <label for="parking-filter">Парковка</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="wifi" id="wifi-filter">
+                  <label for="wifi-filter">Wi-Fi</label>
+                </li>
                 <li>
                   <input class="visually-hidden filter-checkbox" type="checkbox" name="swimingpool" id="swimingpool-filter" checked>
                   <label for="swimingpool-filter">Бассейн</label>

@@ -124,7 +124,7 @@ img {
 }
 
 .site-navigation li:nth-child(3n) {
-
+padding-left: 140px;
 }
 
 .site-list a {
@@ -377,10 +377,6 @@ img {
   transform: translateY(-100%) translateX(-50%);
 }
 
-.checkin-form-error {
-  animation: shake 0.6s;
-}
-
 @keyframes appearance {
   0% {
     transform: translateY(-100%) translateX(-50%);
@@ -396,18 +392,6 @@ img {
   }
   100% {
     transform: translateY(-100%) translateX(-50%);
-  }
-}
-
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(-50%);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-55%);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(-45%);
   }
 }
 
@@ -577,7 +561,7 @@ input[type="number"] {
   line-height: 26px;
   text-align: center;
   color: var(--basic-white);
-  vertical-align: middle;
+  vertical-align: top;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
@@ -712,6 +696,8 @@ input[type="number"] {
 .hotel-filter {
   background-color: var(--basic-blue);
   background-image: url("../img/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
   color: var(--basic-white);
   display: flex;
   padding-top: 26px;
